@@ -1,0 +1,4 @@
+#!/bin/bash
+
+image_to_j2k -i /root/image/1.ppm -r 10 -o /root/image/1r10.j2k
+/root/transmit/send_command Finish!!

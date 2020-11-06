@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Run receive file infinitely
+while (true)
+do
+/root/transmit/recv_file /root/image/1.gif
+done

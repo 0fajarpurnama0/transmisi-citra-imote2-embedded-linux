@@ -1,0 +1,29 @@
+#ifndef __TOSMAC_H
+#define __TOSMAC_H
+
+#define TOSMAC_MAJOR 240 // this number is allocated for local use
+
+#define TOSMAC_IOCTL_MAGIC 0xF4
+
+#define TOSMAC_IOSETADDR	_IOW(TOSMAC_IOCTL_MAGIC, 0, __u16)
+#define TOSMAC_IOGETADDR	_IO(TOSMAC_IOCTL_MAGIC,  1)
+#define TOSMAC_IOAUTOACK	_IO(TOSMAC_IOCTL_MAGIC,  2)
+#define TOSMAC_IODISAUTOACK	_IO(TOSMAC_IOCTL_MAGIC,  3)
+#define TOSMAC_IOSETCHAN	_IOW(TOSMAC_IOCTL_MAGIC, 4, __u16)
+#define TOSMAC_IOGETCHAN	_IO(TOSMAC_IOCTL_MAGIC,  5)
+#define TOSMAC_IOSETFREQ	_IOW(TOSMAC_IOCTL_MAGIC, 6, __u16)
+#define TOSMAC_IOGETFREQ	_IO(TOSMAC_IOCTL_MAGIC,  7)
+#define TOSMAC_IOSETMAXDATASIZE	_IOW(TOSMAC_IOCTL_MAGIC, 8, __u16)
+#define TOSMAC_IOGETMAXDATASIZE	_IO(TOSMAC_IOCTL_MAGIC,  9)
+#define TOSMAC_IOSETPOWER	_IOW(TOSMAC_IOCTL_MAGIC, 10, __u16)
+#define TOSMAC_IOGETPOWER	_IO(TOSMAC_IOCTL_MAGIC,  11)
+
+
+struct tosmac_device {
+    struct semaphore sem;
+    struct cdev cdev;
+    int devno;
+    wait_queue_head_t rq;
+};
+
+#endif

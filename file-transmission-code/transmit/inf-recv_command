@@ -1,0 +1,9 @@
+#!/bin/bash
+
+/root/transmit/send # send "!!Ready!!" message
+
+# Run receive command infinitely
+while (true)
+do
+/root/transmit/recv_command
+done

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/root/transmit/send_file_advance /root/image/1r10.j2k

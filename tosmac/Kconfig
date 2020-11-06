@@ -1,0 +1,12 @@
+#
+# BMAC over CC2420 chipset driver configuration
+#
+
+menu "TOS_MAC Driver Support"
+
+config TOS_MAC
+	tristate "TOS_MAC Support"
+	---help---
+	  TOS_MAC Driver over CC2420
+
+endmenu

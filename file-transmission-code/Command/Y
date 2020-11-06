@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/root/ov7670/capture
+/root/transmit/send_command Finish!!
